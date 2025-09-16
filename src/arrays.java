@@ -31,18 +31,16 @@ public class arrays {
 //            System.out.println(Arrays.toString(a));
 //        }
         // Wap to find the largest element in a given array
-        int[] arr = new int[5];
-        System.out.println("Enter 5 integers:");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
-        Arrays.sort(arr);
-        int largest = arr[arr.length - 1];
-        System.out.println(largest);
+//        int[] arr = new int[5];
+//        System.out.println("Enter 5 integers:");
 //        for (int i = 0; i < arr.length; i++) {
-//
+//            arr[i] = sc.nextInt();
 //        }
-//
+//        Arrays.sort(arr);
+//        int largest = arr[arr.length - 1];
+//        System.out.println(largest);
+        // wap to copy an array into another
+        
 
     }
 }
