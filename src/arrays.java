@@ -104,6 +104,17 @@ public class arrays {
                         transpose[j][i] = max1[i][j];
                     }
                 }
+                // Sum of Diagonal Elements
+                int mainDiagonalSum = 0;
+                int antiDiagonalSum = 0;
+
+                 for(int i = 0; i < max1.length; i++) {
+            // Main diagonal: elements where row index = column index
+                mainDiagonalSum += max1[i][i];
+
+            // Anti-diagonal: elements where row + column = n-1
+                antiDiagonalSum += max1[i][max1.length-1-i];
+        }
 
                 // Display original matrices
                 System.out.println("\nFirst Matrix:");
@@ -119,8 +130,11 @@ public class arrays {
                 // Display transpose (fixed dimensions)
                 System.out.println("\nTranspose of first matrix:");
                 printMatrix(transpose, cols, rows); // Note: rows and cols are swapped
+                System.out.println("The diagonal sum is: " + mainDiagonalSum);
+                System.out.println("The anti diagonal sum is: " + antiDiagonalSum);
 
                 sc.close();
+
             }
 
             // Helper method to print matrix
