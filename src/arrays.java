@@ -40,7 +40,16 @@ public class arrays {
 //        int largest = arr[arr.length - 1];
 //        System.out.println(largest);
         // wap to copy an array into another
-        
+//        int[] source = new int[5];
+//        int[] destination = new int[5];
+//        System.out.println("Enter array elements:");
+//        for(int i=0;i<=source.length;i++){
+//            source[i]=sc.nextInt();
+//        }
+//        for (int i = 0; i < source.length; i++) {
+//            destination[i] = source[i];
+//        }
+//        System.out.println( Arrays.toString(destination));
 
     }
 }
