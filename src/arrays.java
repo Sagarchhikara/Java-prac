@@ -62,42 +62,78 @@ public class arrays {
 //
 //    }
         // Program to add to matrix
-        System.out.println("Enter the number of elements in the array");
-        int rows = sc.nextInt();
-        int cols = sc.nextInt();
-        int[][] max1= new int[rows][cols];
-        int[][] max2= new int[rows][cols];
-        System.out.println("Enter the elements in the  1st array");
-        for(int row=0;row<= max1.length;row++){
-            for(int col=0;col<max1[row].length;col++){
-                max1[row][col]=sc.nextInt();
-        }
-        }
-        System.out.println("Enter the elements in the  2nd array");
-        for(int row=0;row<=max2.length;row++){
-            for(int col=0;col<max2[row].length;col++){
-                max2[row][col]=sc.nextInt();
+
+
+
+
+                System.out.println("Enter the number of rows and columns:");
+                int rows = sc.nextInt();
+                int cols = sc.nextInt();
+
+                int[][] max1 = new int[rows][cols];
+                int[][] max2 = new int[rows][cols];
+                int[][] transpose = new int[cols][rows]; // Note: dimensions are swapped
+
+                // Input for first array
+                System.out.println("Enter the elements in the 1st array:");
+                for(int row = 0; row < rows; row++) { // Changed <= to <
+                    for(int col = 0; col < cols; col++) { // Changed <= to <
+                        max1[row][col] = sc.nextInt();
+                    }
+                }
+
+                // Input for second array
+                System.out.println("Enter the elements in the 2nd array:");
+                for(int row = 0; row < rows; row++) { // Changed <= to <
+                    for(int col = 0; col < cols; col++) { // Fixed: was < in original
+                        max2[row][col] = sc.nextInt();
+                    }
+                }
+
+                // Matrix addition (uncommented and fixed)
+                int[][] sum = new int[rows][cols];
+                for(int i = 0; i < rows; i++) {
+                    for(int j = 0; j < cols; j++) {
+                        sum[i][j] = max1[i][j] + max2[i][j];
+                    }
+                }
+
+                // Transpose of first matrix
+                for(int i = 0; i < rows; i++) {
+                    for(int j = 0; j < cols; j++) {
+                        transpose[j][i] = max1[i][j];
+                    }
+                }
+
+                // Display original matrices
+                System.out.println("\nFirst Matrix:");
+                printMatrix(max1, rows, cols);
+
+                System.out.println("\nSecond Matrix:");
+                printMatrix(max2, rows, cols);
+
+                // Display sum
+                System.out.println("\nSum of matrices:");
+                printMatrix(sum, rows, cols);
+
+                // Display transpose (fixed dimensions)
+                System.out.println("\nTranspose of first matrix:");
+                printMatrix(transpose, cols, rows); // Note: rows and cols are swapped
+
+                sc.close();
+            }
+
+            // Helper method to print matrix
+            public static void printMatrix(int[][] matrix, int rows, int cols) {
+                for(int i = 0; i < rows; i++) {
+                    for(int j = 0; j < cols; j++) {
+                        System.out.print(matrix[i][j] + " ");
+                    }
+                    System.out.println(); // New line after each row
+                }
             }
         }
-//        for(int row=0;row<=max1.length;row++){}
-        int[][] sum= new int[rows][cols];
-        for(int i=0;i<rows;i++){
-            for(int j=0;j<cols;j++){
-                sum[i][j]= max1[i][j]+max2[i][j];
-
-            }
-        }
-        for (int i = 0; i<rows; i++) {
-            for (int j = 0; j<cols; j++) {
-                System.out.println(sum[i][j]+" ");
-            }
-        }
-    }
 
 
 
-}
-//    static void change(int[] arr){
-//        arr[0]
-//    }
-//}
+
