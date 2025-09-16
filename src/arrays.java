@@ -50,8 +50,52 @@ public class arrays {
 //            destination[i] = source[i];
 //        }
 //        System.out.println( Arrays.toString(destination));
+//        int[] arr= new int[5];
+//        for(int i=0;i<5;i++){
+//            arr[i]=sc.nextInt();
+//        }
+//        for(int j=0;j<5;j++){
+//            System.out.print(arr[j]+" ");
+//        }
+//        System.out.println();
+//        System.out.println(Arrays.toString(arr));
+//
+//    }
+        // Program to add to matrix
+        System.out.println("Enter the number of elements in the array");
+        int rows = sc.nextInt();
+        int cols = sc.nextInt();
+        int[][] max1= new int[rows][cols];
+        int[][] max2= new int[rows][cols];
+        System.out.println("Enter the elements in the  1st array");
+        for(int row=0;row<= max1.length;row++){
+            for(int col=0;col<max1[row].length;col++){
+                max1[row][col]=sc.nextInt();
+        }
+        }
+        System.out.println("Enter the elements in the  2nd array");
+        for(int row=0;row<=max2.length;row++){
+            for(int col=0;col<max2[row].length;col++){
+                max2[row][col]=sc.nextInt();
+            }
+        }
+//        for(int row=0;row<=max1.length;row++){}
+        int[][] sum= new int[rows][cols];
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                sum[i][j]= max1[i][j]+max2[i][j];
 
+            }
+        }
+        for (int i = 0; i<rows; i++) {
+            for (int j = 0; j<cols; j++) {
+                System.out.println(sum[i][j]+" ");
+            }
+        }
     }
+
+
+
 }
 //    static void change(int[] arr){
 //        arr[0]
