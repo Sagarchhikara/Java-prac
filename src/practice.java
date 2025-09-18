@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class practice {
     // Wap to find the largest element in a given array
     // wap to input and print a 2d array
@@ -7,6 +9,12 @@ public class practice {
     // wap to find the transpose of given matrix
     // wap to find the sum of primary and secondary diagonal of a matrix
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr={1 ,11,23,45,6};
+        System.out.println("Enter the number you want to input");
+        int num=sc.nextInt();
+        int n=arr.length;
+
 
     }
 
