@@ -16,11 +16,15 @@ Basically: if it smells like Java, it probably lives here.
 ---
 
 ## 📂 Repo Structure
-.
+
 ├── basics/ # Variables, loops, conditionals
+
 ├── oops/ # Classes, objects, inheritance, polymorphism
+
 ├── collections/ # Lists, Sets, Maps, Queues
+
 ├── algorithms/ # Sorting, searching, recursion, etc.
+
 └── misc/ # Random experiments & utilities
 
 *(Names may mutate as I learn new tricks 🦎)*
