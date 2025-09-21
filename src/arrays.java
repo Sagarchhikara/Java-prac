@@ -146,10 +146,10 @@ public class arrays {
 //                    System.out.println(); // New line after each row
 //                }
 //            }
-        int[] nums ={3,4,5,61,12};
-        System.out.println(Arrays.toString(nums));
-        change(nums);
-        System.out.println(Arrays.toString(nums));;
+//        int[] nums ={3,4,5,61,12};
+//        System.out.println(Arrays.toString(nums));
+//        change(nums);
+//        System.out.println(Arrays.toString(nums));;
         }
         static void change(int[] arr){
         arr[0]=99;
