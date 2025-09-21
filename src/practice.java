@@ -80,88 +80,93 @@ public class practice {
 //        return newArray;
 //    }
 
-
-    // Corrected findElement method
-    static int findElement(int[] arr, int n, int key) {
-        for (int i = 0; i < n; i++) {  // Changed <= to <
-            if (arr[i] == key) {
-                return i;  // Return index if found
-            }
-        }
-        return -1;  // Moved outside the loop - return -1 only after checking all elements
-    }
-
-    // Corrected deleteElement method
-    static int deleteElement(int[] arr, int n, int key) {
-        // First find the position of the element to delete
-        int pos = findElement(arr, n, key);
-
-        // If element not found, return original size
-        if (pos == -1) {
-            System.out.println("Element " + key + " not found in array");
-            return n;
-        }
-
-        // Shift elements to the left to fill the gap
-        for (int i = pos; i < n - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
-
-        // Optional: Set the last element to 0 (or default value)
-        arr[n - 1] = 0;
-
-        return n - 1;  // Return new size
-    }
-
-    // Utility method to print array
-    static void printArray(int[] arr, int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
-    // Main method to test the functions
+//
+//    // Corrected findElement method
+//    static int findElement(int[] arr, int n, int key) {
+//        for (int i = 0; i < n; i++) {  // Changed <= to <
+//            if (arr[i] == key) {
+//                return i;  // Return index if found
+//            }
+//        }
+//        return -1;  // Moved outside the loop - return -1 only after checking all elements
+//    }
+//
+//    // Corrected deleteElement method
+//    static int deleteElement(int[] arr, int n, int key) {
+//        // First find the position of the element to delete
+//        int pos = findElement(arr, n, key);
+//
+//        // If element not found, return original size
+//        if (pos == -1) {
+//            System.out.println("Element " + key + " not found in array");
+//            return n;
+//        }
+//
+//        // Shift elements to the left to fill the gap
+//        for (int i = pos; i < n - 1; i++) {
+//            arr[i] = arr[i + 1];
+//        }
+//
+//        // Optional: Set the last element to 0 (or default value)
+//        arr[n - 1] = 0;
+//
+//        return n - 1;  // Return new size
+//    }
+//
+//    // Utility method to print array
+//    static void printArray(int[] arr, int n) {
+//        for (int i = 0; i < n; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println();
+//    }
+//
+//    // Main method to test the functions
+//    public static void main(String[] args) {
+//        int[] arr = new int[10];  // Array with capacity 10
+//        int n = 5;  // Current number of elements
+//
+//        // Initialize array
+//        arr[0] = 10;
+//        arr[1] = 20;
+//        arr[2] = 30;
+//        arr[3] = 40;
+//        arr[4] = 50;
+//
+//        System.out.println("Original array:");
+//        printArray(arr, n);
+//
+//        // Test findElement
+//        int key = 30;
+//        int position = findElement(arr, n, key);
+//        System.out.println("Element " + key + " found at position: " + position);
+//
+//        // Test deleteElement
+//        System.out.println("\nDeleting element " + key + ":");
+//        n = deleteElement(arr, n, key);
+//        System.out.println("New array size: " + n);
+//        printArray(arr, n);
+//
+//        // Test deleting non-existent element
+//        System.out.println("\nTrying to delete element 99:");
+//        n = deleteElement(arr, n, 99);
+//        System.out.println("Array size remains: " + n);
+//        printArray(arr, n);
+//
+//        // Test edge case - delete first element
+//        System.out.println("\nDeleting first element (10):");
+//        n = deleteElement(arr, n, 10);
+//        printArray(arr, n);
+//
+//        // Test edge case - delete last element
+//        System.out.println("\nDeleting last element (50):");
+//        n = deleteElement(arr, n, 50);
+//        printArray(arr, n);
+//    }
+//}
     public static void main(String[] args) {
-        int[] arr = new int[10];  // Array with capacity 10
-        int n = 5;  // Current number of elements
+        // to find the largest element in a java
 
-        // Initialize array
-        arr[0] = 10;
-        arr[1] = 20;
-        arr[2] = 30;
-        arr[3] = 40;
-        arr[4] = 50;
-
-        System.out.println("Original array:");
-        printArray(arr, n);
-
-        // Test findElement
-        int key = 30;
-        int position = findElement(arr, n, key);
-        System.out.println("Element " + key + " found at position: " + position);
-
-        // Test deleteElement
-        System.out.println("\nDeleting element " + key + ":");
-        n = deleteElement(arr, n, key);
-        System.out.println("New array size: " + n);
-        printArray(arr, n);
-
-        // Test deleting non-existent element
-        System.out.println("\nTrying to delete element 99:");
-        n = deleteElement(arr, n, 99);
-        System.out.println("Array size remains: " + n);
-        printArray(arr, n);
-
-        // Test edge case - delete first element
-        System.out.println("\nDeleting first element (10):");
-        n = deleteElement(arr, n, 10);
-        printArray(arr, n);
-
-        // Test edge case - delete last element
-        System.out.println("\nDeleting last element (50):");
-        n = deleteElement(arr, n, 50);
-        printArray(arr, n);
     }
-}
 
+}
