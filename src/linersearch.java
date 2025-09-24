@@ -2,7 +2,7 @@ public class linersearch {
     public static void main (String[] args) {
         int[] nums={23,11,1,3,6,8,-11,28,67};
         int target=19;
-        int ans=linearsearch(nums,target);
+        int ans=linearsearch2(nums,target);
         System.out.println(ans);
 
 
