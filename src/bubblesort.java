@@ -1,25 +1,24 @@
-import java.util.*;
-public class bubblesort {
-    public  static  void printsort(int arr[]){
-        for(int i=0;i<arr.length;i++){
-            System.out.println(arr[i]+" ");
-        }
-    }
-    public static void main(){
-        int[] arr={1,12,4,6,87,3,2,9,};
-        //bubblesort
-        for (int i = 0; i < arr.length ; i++) {
-            for (int j = 0; j <arr.length ; j++) {
-                if (arr[j] > arr[j+1]) {
-                    int tempt=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=tempt;
+import java.util.Arrays;
 
+public class bubblesort {
+    public static void main(String[] args){
+        int[] arr={5,4,3,2,1};
+        bubble(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    private static void bubble(int[] arr) {
+        // run the steps n-1 times
+        for(int i=0;i<arr.length;i++){
+            // for each step max item  with come at last respective index
+            for (int j = 1; j <arr.length-i ; j++) {
+                if(arr[j]<arr[j-1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
                 }
 
             }
-
         }
-        printsort(arr);
     }
 }
