@@ -26,5 +26,6 @@ class selectionsort{
             System.out.print(num + " ");
         }
         System.out.println();
+
     }
 }
