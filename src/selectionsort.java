@@ -1,4 +1,4 @@
-class selectionsort{
+class selectionsort {
     public static void main(String[] args) {
         int[] arr = {64, 25, 12, 22, 11};
 
@@ -26,22 +26,21 @@ class selectionsort{
 //        System.out.println();
 //
 //    }
-  static  void selection(int[] arr){
-      for (int i = 0; i < arr.length; i++) {
-        int last=arr.length-i-1;
-        int maxindex=getMaxIndex(arr,0,last)
-      }
-  }
+//  static  void selection(int[] arr){
+//      for (int i = 0; i < arr.length; i++) {
+//        int last=arr.length-i-1;
+//        int maxindex=getMaxIndex(arr,0,last);
+//      }
+//  }
 
     private static int getMaxIndex(int[] arr, int start, int last) {
-        int max=start;
+        int max = start;
         for (int i = start; i < last; i++) {
-            if(arr[max]<arr[i]){
-                max=i;
+            if (arr[max] < arr[i]) {
+                max = i;
             }
 
         }
-    return max;
+        return max;
     }
-    void swap(int[] arr)
 }
