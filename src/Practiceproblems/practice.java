@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
+package Practiceproblems;
 
 public class practice {
     // Wap to find the largest element in a given array
@@ -164,6 +163,7 @@ public class practice {
 //        printArray(arr, n);
 //    }
 //}
+
     public static void main(String[] args) {
         // to find the largest element in a java
 

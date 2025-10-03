@@ -35,8 +35,8 @@ Basically: if it smells like Java, it probably lives here.
 
 1. **Clone this repo**
   
-   git clone https://github.com/<your-username>/java-practice.git
-   cd java-practice
+   git clone https://github.com/<your-username>/java-Practiceproblems.practice.git
+   cd java-Practiceproblems.practice
 2. **Compile a file**
 
 

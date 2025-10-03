@@ -1,3 +1,5 @@
+package Sorting;
+
 public class mergesort {
     public static void main(String[] args){
         int[] arr={12,11,13,5,6,9,15,86,31};
