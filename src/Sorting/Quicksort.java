@@ -53,7 +53,7 @@ public class Quicksort {
         System.out.println();
     }
 
-    // Main method for testing
+    // LinkedLists.linkedlists.Main method for testing
     public static void main(String[] args) {
         int[] arr = {64, 34, 25, 12, 22, 11, 90};
 

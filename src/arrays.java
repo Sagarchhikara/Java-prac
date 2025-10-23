@@ -109,7 +109,7 @@ public class arrays {
 //                int antiDiagonalSum = 0;
 //
 //                 for(int i = 0; i < max1.length; i++) {
-//            // Main diagonal: elements where row index = column index
+//            // LinkedLists.linkedlists.Main diagonal: elements where row index = column index
 //                mainDiagonalSum += max1[i][i];
 //
 //            // Anti-diagonal: elements where row + column = n-1

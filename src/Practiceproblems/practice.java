@@ -120,7 +120,7 @@ public class practice {
 //        System.out.println();
 //    }
 //
-//    // Main method to test the functions
+//    // LinkedLists.linkedlists.Main method to test the functions
 //    public static void main(String[] args) {
 //        int[] arr = new int[10];  // Array with capacity 10
 //        int n = 5;  // Current number of elements
