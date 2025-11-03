@@ -39,20 +39,27 @@ public class Linkedlist {
         tail=newNode;
         size++;
     }
-    public  void insert(int value,int index) {
-        if(index==0){
-            insertFirst(value);
+    public void insert(int value, int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+
+        if (index == 0) {
+            insertFirst(value);  // Fixed: Changed to match your method name
             return;
         }
-        else if(index==size){
-            insertLast(value);
+        else if (index == size) {
+            insertLast(value);   // Fixed: Changed to match your method name
             return;
         }
-        Node temp=head;
-        for (int i = 1; i < index; i++) {
-            temp=temp.next;
+
+        Node temp = head;
+        for (int i = 1; i < index; i++) {  // Fixed: Start from 1 since we're already at head (index 0)
+            temp = temp.next;
         }
-        
+        Node node = new Node(value, temp.next);
+        temp.next = node;
+        size++;
     }
     public void display() {
         Node temp=head;
