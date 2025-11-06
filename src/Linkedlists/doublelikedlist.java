@@ -12,6 +12,19 @@ public class doublelikedlist {
         }
         head = node;
     }
+    public void insertLast(int data) {
+        Node node = new Node(data);
+        Node last = head;
+        node.next=null;
+        if(head == null) {
+            node.prev = null;
+            head = node;
+            return;
+        }
+        while (head.next != null) {
+            last=last.next;
+        }
+    }
     public void display(){
         Node node = head;
         Node last=null;
