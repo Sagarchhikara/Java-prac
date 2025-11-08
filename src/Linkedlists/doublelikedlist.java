@@ -21,10 +21,14 @@ public class doublelikedlist {
             head = node;
             return;
         }
-        while (head.next != null) {
+        while (last.next != null) {
             last=last.next;
         }
+        last.next = node;
+        node.prev=last;
     }
+    
+
     public void display(){
         Node node = head;
         Node last=null;
