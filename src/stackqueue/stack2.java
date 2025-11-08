@@ -1,8 +1,6 @@
 package stackqueue;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class stack2 {
     public  static  void main(String[] args){
@@ -16,13 +14,18 @@ public class stack2 {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.pop());
        // Queue in java
-        Queue<Integer> queue= new LinkedList<>();
-        queue.add(3);
-        queue.add(23);
-        queue.add(4);
-        queue.add(5);
-        queue.add(6);
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
+//        Queue<Integer> queue= new LinkedList<>();
+//        queue.add(3);
+//        queue.add(23);
+//        queue.add(4);
+//        queue.add(5);
+//        queue.add(6);
+//        System.out.println(queue.remove());
+//        System.out.println(queue.remove());
+//        Deque<Integer> deque=new ArrayDeque<>();
+//        deque.add(1);
+//        deque.addLast(99);
+//
+
     }
 }
