@@ -10,5 +10,5 @@ class stack1{
     public stack1(){
         data=new int[DEFAULT_CAPACITY];
     }
-    
+v saas  d
     }
