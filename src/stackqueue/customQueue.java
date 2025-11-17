@@ -1,4 +1,4 @@
-package com.kunal;
+package stackqueue;
 
 public class customQueue {
     private int[] data;
