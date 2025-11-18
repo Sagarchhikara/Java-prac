@@ -7,6 +7,7 @@ public class ququemain {
         queue.insert(3);
         queue.insert(2);
         queue.insert(1);
-        queue.
+        queue.display();
+        System.out.println(queue.remove());
     }
 }
