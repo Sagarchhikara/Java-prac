@@ -66,6 +66,12 @@ public class Linkedlist {
             head=head.next;
         }
     }
+    public  void get(int index){
+        Node node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+    }
     public void display() {
         Node temp=head;
         while(temp!=null){
