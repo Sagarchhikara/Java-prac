@@ -27,7 +27,22 @@ public class LinkedListpractice {
             head=newNode;
         }
     Node temp=head;
-    while()
+    while(temp!=head){
+        temp=temp.next;
+
+    }
+    temp.next=newNode;
+    newNode.prev=temp;
+    }
+    public void insertatPostion(int data;int index){
+        if(index<=1){
+            insertEnd(data);
+            return
+        }
+        Node newNode= new Node(data);
+        Node temp=head;
+        for(int i=0)
+
     }
 
 
