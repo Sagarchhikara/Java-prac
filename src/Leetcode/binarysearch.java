@@ -1,6 +1,6 @@
-package Codechallenge;
+package Leetcode;
 
-public class code2 {
+public class binarysearch {
     public static void main(String[] args) {
     }
         // binary search questions
@@ -57,6 +57,7 @@ public class code2 {
         }
         return ans;
     }
+// Q 852 https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 
     }
 
