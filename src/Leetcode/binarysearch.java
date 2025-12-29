@@ -58,6 +58,7 @@ public class binarysearch {
         return ans;
     }
 // Q 852 https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+// Q 165
         public int peakIndexInMountainArray(int[] arr) {
         int start=0;
         int end=arr.length-1;
@@ -73,5 +74,65 @@ public class binarysearch {
         }
         return start;
     }
+ //    https://leetcode.com/problems/find-in-mountain-array/description/
+
+    class Solution {
+        public int findInMountainArray(int target, MountainArray mountainArr) {
+            int length = mountainArr.length();
+            int peakIndex = findPeak(mountainArr, length);
+
+            int result = findTarget(mountainArr, 0, peakIndex, target, true);
+            if (result != -1) {
+                return result;
+            }
+
+            return findTarget(mountainArr, peakIndex + 1, length - 1, target, false);
+        }
+
+        private int findTarget(MountainArray mountainArr, int left, int right, int target, boolean isUpside) {
+            while (left <= right) {
+                int mid = (left + right) / 2;
+                int midVal = mountainArr.get(mid);
+
+                if (midVal == target) {
+                    return mid;
+                }
+
+                if (isUpside) {
+                    if (target > midVal) {
+                        left = mid + 1;
+                    } else {
+                        right = mid - 1;
+                    }
+                } else {
+                    if (target > midVal) {
+                        right = mid - 1;
+                    } else {
+                        left = mid + 1;
+                    }
+                }
+            }
+
+            return -1;
+        }
+
+        private int findPeak(MountainArray mountainArr, int length) {
+            int left = 0;
+            int right = length - 1;
+
+            while (left < right) {
+                int mid = (left + right) / 2;
+                if (mountainArr.get(mid) < mountainArr.get(mid + 1)) {
+                    left = mid + 1;
+                } else {
+                    right = mid;
+                }
+            }
+
+            return left;
+        }
+    }
+    // Q 33 https://leetcode.com/problems/find-in-mountain-array/
+
     }
 

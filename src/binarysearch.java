@@ -50,5 +50,7 @@ public class binarysearch {
     }
         return -1;
     }
+// Q 33    https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+    
 }
 
