@@ -1,5 +1,5 @@
-package Linkedlists;
-
-public class LLquestions {
-    public  void duplica
-}
+//package Linkedlists;
+//
+//public class LLquestions {
+//    public  void duplica
+//}
