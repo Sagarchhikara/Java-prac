@@ -13,5 +13,7 @@ public class string {
         sb.insert(0,"s");
         System.out.println(sb);
         sb.insert(2,'n');
+        sb.append("e");
+        System.out.println(sb);
     }
 }
