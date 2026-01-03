@@ -19,5 +19,21 @@ public class Code1 {
 
         return result.toString();
     }
+    public  static void familyphoto(int[] arr,int n){
+        int start=0;
+        int end=start+n-1;
+        for(int i=start;i<=end;i++){
+            for(int j=start;j<=end;j++){
+                if(arr[j]<arr[j-1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
+                }
+            }
+            start+=n-1;
+            end+=n-1;
+        }
+    }
+
 }
 
