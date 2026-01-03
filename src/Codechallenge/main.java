@@ -1,17 +1,62 @@
 package Codechallenge;
-
+import java.util.*;
 import java.util.Scanner;
-
+import static Codechallenge.Code1.*;
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of elements you want to enter");
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        int[] arr= new int[n];
-        for (int i = 0; i < arr.length;i++) {
-            arr[i]=sc.nextInt();
-        }
-        arr=
+        // Test cases
+
+        System.out.println("Test Case 1: Basic test");
+        int[] arr1 = {5, 2, 8, 1, 9, 3, 7, 4, 6, 0};
+        System.out.println("Original: " + Arrays.toString(arr1));
+        familyphoto(arr1, 3);
+        System.out.println("After sorting segments of 3: " + Arrays.toString(arr1));
+        System.out.println();
+
+        System.out.println("Test Case 2: Segment size equals array length");
+        int[] arr2 = {9, 5, 7, 2, 8, 1, 6, 3, 4};
+        System.out.println("Original: " + Arrays.toString(arr2));
+        familyphoto(arr2, 9);
+        System.out.println("After sorting entire array: " + Arrays.toString(arr2));
+        System.out.println();
+
+        System.out.println("Test Case 3: Segment size of 1");
+        int[] arr3 = {3, 1, 4, 1, 5, 9, 2, 6};
+        System.out.println("Original: " + Arrays.toString(arr3));
+        familyphoto(arr3, 1);
+        System.out.println("After sorting segments of 1: " + Arrays.toString(arr3));
+        System.out.println();
+
+        System.out.println("Test Case 4: Array length not divisible by n");
+        int[] arr4 = {7, 3, 9, 2, 5, 8, 1, 4, 6};
+        System.out.println("Original: " + Arrays.toString(arr4));
+        familyphoto(arr4, 4);
+        System.out.println("After sorting segments of 4: " + Arrays.toString(arr4));
+        System.out.println();
+
+        System.out.println("Test Case 5: Already sorted array");
+        int[] arr5 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println("Original: " + Arrays.toString(arr5));
+        familyphoto(arr5, 3);
+        System.out.println("After sorting segments of 3: " + Arrays.toString(arr5));
+        System.out.println();
+
+        System.out.println("Test Case 6: Reverse sorted array");
+        int[] arr6 = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        System.out.println("Original: " + Arrays.toString(arr6));
+        familyphoto(arr6, 2);
+        System.out.println("After sorting segments of 2: " + Arrays.toString(arr6));
+        System.out.println();
+
+        // Test with invalid inputs
+        System.out.println("Test Case 7: Invalid segment size");
+        int[] arr7 = {1, 2, 3};
+        familyphoto(arr7, 0);
+        familyphoto(arr7, 5);
+        System.out.println();
+
+        System.out.println("Test Case 8: Empty array");
+        int[] arr8 = {};
+        familyphoto(arr8, 2);
     }
 }

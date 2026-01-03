@@ -19,19 +19,37 @@ public class Code1 {
 
         return result.toString();
     }
-    public  static void familyphoto(int[] arr,int n){
-        int start=0;
-        int end=start+n-1;
-        for(int i=start;i<=end;i++){
-            for(int j=start;j<=end;j++){
-                if(arr[j]<arr[j-1]){
-                    int temp=arr[j];
-                    arr[j]=arr[j-1];
-                    arr[j-1]=temp;
+    public static void familyphoto(int[] arr, int n) {
+        // Handle edge cases
+        if (arr == null || n <= 0 || n > arr.length) {
+            System.out.println("Invalid input parameters");
+            return;
+        }
+
+        int start = 0;
+        int end = start + n - 1;
+
+        // Process all segments of size n
+        while (start < arr.length) {
+            // Adjust end if it exceeds array bounds
+            if (end >= arr.length) {
+                end = arr.length - 1;
+            }
+
+            // Sort the current segment using bubble sort
+            for (int i = start; i <= end; i++) {
+                for (int j = start + 1; j <= end - (i - start); j++) {
+                    if (arr[j] < arr[j - 1]) {
+                        int temp = arr[j];
+                        arr[j] = arr[j - 1];
+                        arr[j - 1] = temp;
+                    }
                 }
             }
-            start+=n-1;
-            end+=n-1;
+
+            // Move to next segment
+            start += n;
+            end += n;
         }
     }
 
