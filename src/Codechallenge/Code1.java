@@ -53,24 +53,38 @@ public class Code1 {
             end += n;
         }
     }
-    public static void reverseGroups(int[] arr, int k) {
-        int n = arr.length;
-
-        // Process each group of size k
-        for (int i = 0; i < n; i += k) {
-            int left = i;
-            // For last group, check if it has fewer than k elements
-            int right = Math.min(i + k - 1, n - 1);
-
-            // Reverse the current group
-            while (left < right) {
-                int temp = arr[left];
-                arr[left] = arr[right];
-                arr[right] = temp;
-                left++;
-                right--;
-            }
+//    public static void reverseGroups(int[] arr, int k) {
+//        int n = arr.length;
+//
+//        // Process each group of size k
+//        for (int i = 0; i < n; i += k) {
+//            int left = i;
+//            // For last group, check if it has fewer than k elements
+//            int right = Math.min(i + k - 1, n - 1);
+//
+//            // Reverse the current group
+//            while (left < right) {
+//                int temp = arr[left];
+//                arr[left] = arr[right];
+//                arr[right] = temp;
+//                left++;
+//                right--;
+//            }
+//        }
+//    }
+    public static int airlinebaggage(int[] ids){
+        if(ids.length==0){
+            return 0;
         }
+        Arrays.sort(ids);
+        int unique=1;
+        for (int i = 1; i < ids.length; i++) {
+            if(ids[i]!=ids[i-1]){
+                unique++;
+            }
+
+        }
+        return unique;
     }
 
 }
