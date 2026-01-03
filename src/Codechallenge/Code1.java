@@ -19,6 +19,7 @@ public class Code1 {
 
         return result.toString();
     }
+    // Question1: Family photo graph
     public static void familyphoto(int[] arr, int n) {
         // Handle edge cases
         if (arr == null || n <= 0 || n > arr.length) {
@@ -50,6 +51,25 @@ public class Code1 {
             // Move to next segment
             start += n;
             end += n;
+        }
+    }
+    public static void reverseGroups(int[] arr, int k) {
+        int n = arr.length;
+
+        // Process each group of size k
+        for (int i = 0; i < n; i += k) {
+            int left = i;
+            // For last group, check if it has fewer than k elements
+            int right = Math.min(i + k - 1, n - 1);
+
+            // Reverse the current group
+            while (left < right) {
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
         }
     }
 
