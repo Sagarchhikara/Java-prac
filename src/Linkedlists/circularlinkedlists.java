@@ -1,7 +1,7 @@
 package Linkedlists;
 
 public class circularlinkedlists {
-    class CircularLinkedList {
+
 
         class Node {
             int data;
@@ -150,4 +150,4 @@ public class circularlinkedlists {
         }
     }
 
-}
+
