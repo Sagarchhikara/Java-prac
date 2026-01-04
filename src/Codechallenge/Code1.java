@@ -73,20 +73,20 @@ public class Code1 {
 //        }
 //    }
     // Q2 -Airline baggage
-//    public static int airlinebaggage(int[] ids){
-//        if(ids.length==0){
-//            return 0;
-//        }
-//        Arrays.sort(ids);
-//        int unique=1;
-//        for (int i = 1; i < ids.length; i++) {
-//            if(ids[i]!=ids[i-1]){
-//                unique++;
-//            }
-//
-//        }
-//        return unique;
-//    }
+    public static int airlinebaggage(int[] ids){
+        if(ids.length==0){
+            return 0;
+        }
+        Arrays.sort(ids);
+        int unique=1;
+        for (int i = 1; i < ids.length; i++) {
+            if(ids[i]!=ids[i-1]){
+                unique++;
+            }
+
+        }
+        return unique;
+    }
 
 
 }

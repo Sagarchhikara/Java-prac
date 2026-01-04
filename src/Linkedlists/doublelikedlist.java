@@ -183,10 +183,10 @@ class DoublyLinkedList {
         if (temp.next != null) {
             temp.next.prev = temp.prev;
         }
-
-        if (temp.prev != null) {
-            temp.prev.next = temp.next;
-        }
+//
+//        if (temp.prev != null) {
+//            temp.prev.next = temp.next;
+//        }
     }
 
     // Forward traversal
