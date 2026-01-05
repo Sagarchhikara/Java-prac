@@ -37,16 +37,16 @@ public class LinkedListpractice {
 //    temp.next=newNode;
 //    newNode.prev=temp;
 //    }
-    public void insertatPostion(int data;int index){
-        if(index<=1){
-            insertEnd(data);
-
-        }
-        Node newNode= new Node(data);
-        Node temp=head;
-        for(int i=0)
-
-    }
+//    public void insertatPostion(int data;int index){
+//        if(index<=1){
+//            insertEnd(data);
+//
+//        }
+//        Node newNode= new Node(data);
+//        Node temp=head;
+//        for(int i=0)
+//
+//    }
 
 //
 //
