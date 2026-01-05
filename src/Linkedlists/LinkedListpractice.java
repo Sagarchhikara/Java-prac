@@ -37,34 +37,34 @@ public class LinkedListpractice {
 //    temp.next=newNode;
 //    newNode.prev=temp;
 //    }
-//    public void insertatPostion(int data;int index){
-//        if(index<=1){
-//            insertEnd(data);
-//
-//        }
-//        Node newNode= new Node(data);
-//        Node temp=head;
-//        for(int i=0)
-//
-//    }
-//
+    public void insertatPostion(int data;int index){
+        if(index<=1){
+            insertEnd(data);
+
+        }
+        Node newNode= new Node(data);
+        Node temp=head;
+        for(int i=0)
+
+    }
+
 //
 //
 //
 //}
-//    public static Node findNLast(Node head, int n) {
-//        if (head == null) return null ;
-//        Node temp = head;
-//        int count = 0;
-//        while (temp.next != null) {
-//            temp = temp.next;
-//            count++;
-//        }
-//        int x= count - n;
-//        for (int i = 0; i < x; i++) {
-//            temp = temp.next;
-//        }
-//        return temp;
-//    }
+    public static Node findNLast(Node head, int n) {
+        if (head == null) return null ;
+        Node temp = head;
+        int count = 0;
+        while (temp.next != null) {
+            temp = temp.next;
+            count++;
+        }
+        int x= count - n;
+        for (int i = 0; i < x; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
 
 }
