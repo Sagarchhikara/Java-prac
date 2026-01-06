@@ -150,6 +150,44 @@ public class Code1 {
         System.out.println(sb);
     }
 
+    static int maxStudentsHired(int[] arr) {
+        Arrays.sort(arr);
+
+        int maxCount = 1;
+        int currentCount = 1;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] == arr[i - 1] + 1) {
+                currentCount++;
+            }
+            else if (arr[i] != arr[i - 1]) {
+                currentCount = 1;
+            }
+            maxCount = Math.max(maxCount, currentCount);
+        }
+        return maxCount;
+    }
+
+    int findMissingBag(int[] departure, int[] arrival) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int id : departure) {
+            map.put(id, map.getOrDefault(id, 0) + 1);
+        }
+
+        for (int id : arrival) {
+            map.put(id, map.get(id) - 1);
+        }
+
+        for (int key : map.keySet()) {
+            if (map.get(key) != 0)
+                return key;
+        }
+
+        return -1; // safety net
+    }
+
+
 
 
 }
