@@ -104,6 +104,21 @@ public class Code1 {
 //        }
 //        return result;
 //    }
+//    static void countFrequency(String s) {
+//        int[] freq = new int[26];
+//
+//        // Count frequencies
+//        for (char ch : s.toCharArray()) {
+//            freq[ch - 'a']++;
+//        }
+//
+//        // Print in sorted order
+//        for (int i = 0; i < 26; i++) {
+//            if (freq[i] > 0) {
+//                System.out.print((char) (i + 'a') + "" + freq[i]);
+//            }
+//        }
+//    }
 
 
 }
