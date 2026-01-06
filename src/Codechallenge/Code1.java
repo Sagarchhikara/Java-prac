@@ -131,6 +131,18 @@ public class Code1 {
         // Compare the STRINGS, not the StringBuilder objects
         return original.equals(reversed);
     }
+    static void checkDistinct(String s) {
+        Set<Character> set = new HashSet<>();
+
+        for (char ch : s.toCharArray()) {
+            if (set.contains(ch)) {
+                System.out.println("NO");
+                return;
+            }
+            set.add(ch);
+        }
+        System.out.println("YES");
+    }
 
 
 }
