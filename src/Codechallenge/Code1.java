@@ -143,6 +143,13 @@ public class Code1 {
         }
         System.out.println("YES");
     }
+    static  void reverseString(String str) {
+        if (str == null ) return;
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        System.out.println(sb);
+    }
+
 
 
 }
