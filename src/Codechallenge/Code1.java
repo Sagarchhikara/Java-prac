@@ -186,7 +186,42 @@ public class Code1 {
 
         return -1; // safety net
     }
+    static void checkUpperTriangular(int[][] matrix) {
+        int n = matrix.length;
+        boolean isUpper = true;
 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) { // only below diagonal
+                if (matrix[i][j] != 0) {
+                    isUpper = false;
+                    break;
+                }
+            }
+        }
+
+        if (isUpper)
+            System.out.println("upper triangular matrix");
+        else
+            System.out.println("not an upper triangular matrix");
+    }
+    static int lastOccurrence(int[] arr, int x) {
+        int low = 0, high = arr.length - 1;
+        int result = -1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (arr[mid] == x) {
+                result = mid;      // store index
+                low = mid + 1;     // move right for last occurrence
+            } else if (arr[mid] < x) {
+                high = mid - 1;    // descending order
+            } else {
+                low = mid + 1;
+            }
+        }
+        return result;
+    }
 
 
 
