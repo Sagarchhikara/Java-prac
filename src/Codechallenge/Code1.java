@@ -119,6 +119,18 @@ public class Code1 {
 //            }
 //        }
 //    }
+    public static boolean isPalindrome(String str) {
+        if (str == null) return false;
+
+        String cleanStr = str.replaceAll("\\s+", "").toLowerCase();
+
+        // Create original and reversed versions
+        String original = cleanStr;
+        String reversed = new StringBuilder(cleanStr).reverse().toString();
+
+        // Compare the STRINGS, not the StringBuilder objects
+        return original.equals(reversed);
+    }
 
 
 }
