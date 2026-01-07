@@ -119,110 +119,110 @@ public class Code1 {
 //            }
 //        }
 //    }
-    public static boolean isPalindrome(String str) {
-        if (str == null) return false;
-
-        String cleanStr = str.replaceAll("\\s+", "").toLowerCase();
-
-        // Create original and reversed versions
-        String original = cleanStr;
-        String reversed = new StringBuilder(cleanStr).reverse().toString();
-
-        // Compare the STRINGS, not the StringBuilder objects
-        return original.equals(reversed);
-    }
-    static void checkDistinct(String s) {
-        Set<Character> set = new HashSet<>();
-
-        for (char ch : s.toCharArray()) {
-            if (set.contains(ch)) {
-                System.out.println("NO");
-                return;
-            }
-            set.add(ch);
-        }
-        System.out.println("YES");
-    }
-    static  void reverseString(String str) {
-        if (str == null ) return;
-        StringBuilder sb = new StringBuilder(str);
-        sb.reverse();
-        System.out.println(sb);
-    }
-
-    static int maxStudentsHired(int[] arr) {
-        Arrays.sort(arr);
-
-        int maxCount = 1;
-        int currentCount = 1;
-
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] == arr[i - 1] + 1) {
-                currentCount++;
-            }
-            else if (arr[i] != arr[i - 1]) {
-                currentCount = 1;
-            }
-            maxCount = Math.max(maxCount, currentCount);
-        }
-        return maxCount;
-    }
-
-    int findMissingBag(int[] departure, int[] arrival) {
-        Map<Integer, Integer> map = new HashMap<>();
-
-        for (int id : departure) {
-            map.put(id, map.getOrDefault(id, 0) + 1);
-        }
-
-        for (int id : arrival) {
-            map.put(id, map.get(id) - 1);
-        }
-
-        for (int key : map.keySet()) {
-            if (map.get(key) != 0)
-                return key;
-        }
-
-        return -1; // safety net
-    }
-    static void checkUpperTriangular(int[][] matrix) {
-        int n = matrix.length;
-        boolean isUpper = true;
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < i; j++) { // only below diagonal
-                if (matrix[i][j] != 0) {
-                    isUpper = false;
-                    break;
-                }
-            }
-        }
-
-        if (isUpper)
-            System.out.println("upper triangular matrix");
-        else
-            System.out.println("not an upper triangular matrix");
-    }
-    static int lastOccurrence(int[] arr, int x) {
-        int low = 0, high = arr.length - 1;
-        int result = -1;
-
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-
-            if (arr[mid] == x) {
-                result = mid;      // store index
-                low = mid + 1;     // move right for last occurrence
-            } else if (arr[mid] < x) {
-                high = mid - 1;    // descending order
-            } else {
-                low = mid + 1;
-            }
-        }
-        return result;
-    }
-
+//    public static boolean isPalindrome(String str) {
+//        if (str == null) return false;
+//
+//        String cleanStr = str.replaceAll("\\s+", "").toLowerCase();
+//
+//        // Create original and reversed versions
+//        String original = cleanStr;
+//        String reversed = new StringBuilder(cleanStr).reverse().toString();
+//
+//        // Compare the STRINGS, not the StringBuilder objects
+//        return original.equals(reversed);
+//    }
+//    static void checkDistinct(String s) {
+//        Set<Character> set = new HashSet<>();
+//
+//        for (char ch : s.toCharArray()) {
+//            if (set.contains(ch)) {
+//                System.out.println("NO");
+//                return;
+//            }
+//            set.add(ch);
+//        }
+//        System.out.println("YES");
+//    }
+//    static  void reverseString(String str) {
+//        if (str == null ) return;
+//        StringBuilder sb = new StringBuilder(str);
+//        sb.reverse();
+//        System.out.println(sb);
+//    }
+//
+//    static int maxStudentsHired(int[] arr) {
+//        Arrays.sort(arr);
+//
+//        int maxCount = 1;
+//        int currentCount = 1;
+//
+//        for (int i = 1; i < arr.length; i++) {
+//            if (arr[i] == arr[i - 1] + 1) {
+//                currentCount++;
+//            }
+//            else if (arr[i] != arr[i - 1]) {
+//                currentCount = 1;
+//            }
+//            maxCount = Math.max(maxCount, currentCount);
+//        }
+//        return maxCount;
+//    }
+//
+//    int findMissingBag(int[] departure, int[] arrival) {
+//        Map<Integer, Integer> map = new HashMap<>();
+//
+//        for (int id : departure) {
+//            map.put(id, map.getOrDefault(id, 0) + 1);
+//        }
+//
+//        for (int id : arrival) {
+//            map.put(id, map.get(id) - 1);
+//        }
+//
+//        for (int key : map.keySet()) {
+//            if (map.get(key) != 0)
+//                return key;
+//        }
+//
+//        return -1; // safety net
+//    }
+//    static void checkUpperTriangular(int[][] matrix) {
+//        int n = matrix.length;
+//        boolean isUpper = true;
+//
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < i; j++) { // only below diagonal
+//                if (matrix[i][j] != 0) {
+//                    isUpper = false;
+//                    break;
+//                }
+//            }
+//        }
+//
+//        if (isUpper)
+//            System.out.println("upper triangular matrix");
+//        else
+//            System.out.println("not an upper triangular matrix");
+//    }
+//    static int lastOccurrence(int[] arr, int x) {
+//        int low = 0, high = arr.length - 1;
+//        int result = -1;
+//
+//        while (low <= high) {
+//            int mid = low + (high - low) / 2;
+//
+//            if (arr[mid] == x) {
+//                result = mid;      // store index
+//                low = mid + 1;     // move right for last occurrence
+//            } else if (arr[mid] < x) {
+//                high = mid - 1;    // descending order
+//            } else {
+//                low = mid + 1;
+//            }
+//        }
+//        return result;
+//    }
+//
 
 
 }
