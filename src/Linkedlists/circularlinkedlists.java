@@ -131,23 +131,23 @@ public class circularlinkedlists {
             return false;
         }
 
-//        // Traversal
-//        public void display() {
-//            if (head == null) {
-//                System.out.println("List is empty!");
-//                return;
-//            }
-//
-//            Node temp = head;
-//            System.out.print("CLL: ");
-//
-//            do {
-//                System.out.print(temp.data + " → ");
-//                temp = temp.next;
-//            } while (temp != head);
-//
-//            System.out.println("(back to head)");
-//        }
-//    }
+        // Traversal
+        public void display() {
+            if (head == null) {
+                System.out.println("List is empty!");
+                return;
+            }
+
+            Node temp = head;
+            System.out.print("CLL: ");
+
+            do {
+                System.out.print(temp.data + " → ");
+                temp = temp.next;
+            } while (temp != head);
+
+            System.out.println("(back to head)");
+        }
+    }
 
 
