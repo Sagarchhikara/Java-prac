@@ -9,7 +9,9 @@ public class adder {
         return a+b;
 }
     public static void  main(String[] args){
-        System.out.println(add(5,6));
-        System.out.println(add(5.5,6.5));
+//        System.out.println(add(5,6));
+//        System.out.println(add(5.5,6.5));
+
+        Vehicle obj = new Vehicle();
     }
 }
