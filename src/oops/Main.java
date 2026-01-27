@@ -1,6 +1,7 @@
 package oops;
 
 public class Main{
+
     public static void main(String[] args) {
         Counter c1 = new Counter();
         c1.display();  // Static: 1, Instance: 1
@@ -17,5 +18,8 @@ public class Main{
         c3.display();  // Static: 3, Instance: 1
 
         Counter.displayStaticCount();  // Can call without object
+//        System.out.println("Output of method ADD(int,int)"+adder.add(6,8));
+//        System.out.println("Output of method ADD(double,double)"+adder.add(6.5));
+
     }
 }
