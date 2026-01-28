@@ -12,6 +12,6 @@ public class adder {
 //        System.out.println(add(5,6));
 //        System.out.println(add(5.5,6.5));
 
-        Vehicle obj = new Vehicle();
+//        Vehicle obj = new Vehicle();
     }
 }
