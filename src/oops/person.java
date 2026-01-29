@@ -37,4 +37,17 @@ class Book {
         Book b = (Book) object;
         return this.title.equals(b.title);
     }
+//}
+//public  class Books implements Cloneable{
+//    private String t;
+//    private String a;
+//    private  int y;
+//    public Books(String t, String a, int y){
+//        this.t=t;
+//        this.a=a;
+//        this.y=y;
+//    }
+//    @Override public String toString(){
+//        return "Title: "+t+", Author: "+a+", Year: "+y;
+//    }
 }
