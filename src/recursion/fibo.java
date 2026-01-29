@@ -5,18 +5,15 @@ import java.util.*;
 //        System.out.println(fibo(4));
 //    }
 //    static int fibo(int n){
-////        if(n<2){
-////            return n;
-////        }
-////        return fibo(n-1)+fibo(n-2);
-//        for (int i = 0; i < n; i++) {
-//            n=(n-1)+(n-2);
+//       if(n<2){
+//          return n;
+//      }
+//       return fibo(n-1)+fibo(n-2);// Doing recursively
 //
 //
-//        }
-//        return
 //    }
 //}
+// Doing Fibonacci series iteratively
 public class fibo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
