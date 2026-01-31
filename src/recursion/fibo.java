@@ -6,7 +6,7 @@ public class fibo {
         System.out.print("Enter a number to find Fibonacci: ");
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            System.out.print(fibo(i)+"->");
+            System.out.print(fibo(i)+"--> ");
         }
         sc.close();
     }
