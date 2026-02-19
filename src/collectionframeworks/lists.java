@@ -1,7 +1,7 @@
 package collectionframeworks;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class lists {
     public static void main(String[] args) {
