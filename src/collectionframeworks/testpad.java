@@ -26,4 +26,30 @@ public class testpad {
             q.add(s.pop());
         }
     }
+    static int balancedString(String s){
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(' || ch == '{') {
+                stack.push(ch);
+            }
+            else if (ch == ')' || ch == '}') {
+                if (stack.isEmpty()) {
+                    return i;
+
+                }
+                char top = stack.pop();
+
+                if ((ch == ')' && top != '(') || (ch == '}' && top != '{')) {
+                    return i;
+                }
+            }
+        }
+        if (!stack.isEmpty()) {
+            return s.length();
+        }
+
+        return -1;
+    }
 }
