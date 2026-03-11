@@ -10,7 +10,7 @@ public class testpad {
             q.add(x);
             q.add(x);
         }
-
+bdubnkdnkq
 
     }
 }
