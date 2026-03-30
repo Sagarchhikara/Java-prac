@@ -11,6 +11,12 @@ public class inbuilteg {
         System.out.println(stack.peek());
         System.out.println(stack.pop());
 
-        Queue<Integer> queue= new
+        Queue<Integer> queue= new LinkedList<>();
+        queue.add(3);
+        queue.add(5);
+        queue.add(6);
+        queue.add(9);
+        System.out.println(queue.peek());
+
     }
 }
