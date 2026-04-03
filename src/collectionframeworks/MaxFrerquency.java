@@ -32,10 +32,30 @@ public class MaxFrerquency {
 
         return '#';
     }
+    public static int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int needed = target - nums[i];
+
+            if (map.containsKey(needed)) {
+                return new int[]{map.get(needed), i};
+            }
+
+            map.put(nums[i], i);
+        }
+
+        return new int[]{-1, -1}; // if no solution
+    }
     public static void main(String[] args) {
-//        int[] arr = {1,2,2,3,3,3};
-//        countfrequency(arr);
+        int[] arr = {1,2,2,3,3,3};
+        countfrequency(arr);
         String str = "aabbcde";
         System.out.println(FirstNonRepeating(str));
+        int[] arr1={2,7,11,15};
+        int target =9;
+        int[] result =twoSum(arr1,target);
+        System.out.println(result);
+
     }
 }
