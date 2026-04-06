@@ -47,6 +47,20 @@ public class MaxFrerquency {
 
         return new int[]{-1, -1}; // if no solution
     }
+    public static boolean longestsum(int[] arr, int k){
+        HashMap<Integer,Integer> map =new HashMap<>();
+        int prefixsum=0;
+        map.put(0,1);
+        for(int num:arr){
+            prefixsum+=num;
+            if(map.containsKey(prefixsum-k)){
+                return  true;
+            }
+            map.put(prefixsum,map.getOrDefault(prefixsum,0)+1);
+        }
+        return  false;
+
+    }
     public static void main(String[] args) {
         int[] arr = {1,2,2,3,3,3};
         countfrequency(arr);
