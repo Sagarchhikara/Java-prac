@@ -5,6 +5,8 @@ public class bitAndORXor {
         System.out.println(51&42);
         System.out.println(51|42);
         System.out.println(countsetbits(5));
+        int[] arr={1,2,3,4,1,2,3};
+        System.out.println(findUnique(arr));
 
     }
     //  Write code to count the number of set bits in an integer n.
@@ -15,5 +17,13 @@ public class bitAndORXor {
             count++;
         }
         return  count;
+    }
+    //7. Given an array where every element appears twice except one, find the unique element. Solve in O(n) time, O(1) space.
+    public static int findUnique(int[] arr){
+        int unique=0;
+        for(int i=0;i<arr.length;i++){
+            unique^=arr[i];
+        }
+        return unique;
     }
 }
