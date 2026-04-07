@@ -7,6 +7,8 @@ public class bitAndORXor {
         System.out.println(countsetbits(5));
         int[] arr={1,2,3,4,1,2,3};
         System.out.println(findUnique(arr));
+        char[] items = {'A','B','C','D'};
+        printsets(items);
 
     }
     //  Write code to count the number of set bits in an integer n.
@@ -26,4 +28,14 @@ public class bitAndORXor {
         }
         return unique;
     }
+    // . Print all subsets of {A, B, C, D} using bitmask.
+    public static void printsets(char[] items){
+        int n = items.length;
+        for (int mask = 0; mask < (1 << n); mask++)
+        { System.out.print("{ ");
+            for (int k = 0; k < n; k++) if ((mask & (1 << k)) != 0) System.out.print(items[k] + " ");
+            System.out.println("}"); }
+
+    }
+
 }
