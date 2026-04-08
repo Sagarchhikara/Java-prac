@@ -9,6 +9,8 @@ public class bitAndORXor {
         System.out.println(findUnique(arr));
         char[] items = {'A','B','C','D'};
         printsets(items);
+        int[] arr1={1,2,2,3,4,4,5,5};
+        findnos(arr1);
 
     }
     //  Write code to count the number of set bits in an integer n.
@@ -37,5 +39,13 @@ public class bitAndORXor {
             System.out.println("}"); }
 
     }
-
+    // Two numbers appear once in an array, all others appear twice. Find both unique numbers.
+    public  static void findnos(int[] arr){
+        int xor = 0;
+        for (int x : arr) xor ^= x;
+        int diffBit = xor & (-xor);
+        int x = 0, y = 0; for (int n : arr)
+        { if ((n & diffBit) != 0) x ^= n; else y ^= n; }
+        System.out.println(x + " " + y);
+    }
 }
