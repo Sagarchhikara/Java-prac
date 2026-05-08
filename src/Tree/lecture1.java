@@ -29,6 +29,26 @@ public class lecture1 {
             node.left = new Node(data);
             populate(sc,node.left);
         }
+        System.out.println("Do you want to enter right of "+node.value+"?");
+        boolean right=sc.nextBoolean();
+        if(right){
+            System.out.println("Enter the value of right of "+node.value);
+            int data = sc.nextInt();
+            node.right = new Node(data);
+            populate(sc,node.right);
+        }
     }
+    // Display the binary tree
+    public  void display(){
+        display(root,"");
+    }
+    private display(Node node ,String indent){
+        if(node==null){
+            return;
+        }
+        System.out.println(indent+node.value);
+
+    }
+
 
 }
