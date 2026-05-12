@@ -56,6 +56,26 @@ public class lecture1 {
         display(node.left, indent + "\t");
         display(node.right, indent + "\t");
     }
+    public  void prettyDisplay() {
+        prettyDisplay(this.root, "", true);
+    }
+     private void prettyDisplay(Node node, String indent, boolean last) {
+        if (node != null) {
+            System.out.print(indent);
+            if (last) {
+                System.out.print("R----");
+                indent += "   ";
+            } else {
+                System.out.print("L----");
+                indent += "|  ";
+            }
+            System.out.println(node.value);
+            prettyDisplay(node.left, indent, false);
+            prettyDisplay(node.right, indent, true);
+        }
+    }
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -63,5 +83,7 @@ public class lecture1 {
         tree.populate(sc);
         System.out.println("The binary tree is:");
         tree.display();
+        System.out.println("Pretty display:");
+        tree.prettyDisplay();
     }
 }// ✓ Use the parameter 'data'
