@@ -41,7 +41,7 @@ public class BFS {
 
         while (!queue.isEmpty()) {
             int levelSize = queue.size();
-            List<Integer> currentLevel = new ArrayList<>(levelSize)
+            List<Integer> currentLevel = new ArrayList<>(levelSize);
                 TreeNode currentNode = queue.poll();
                 currentLevel.add(currentNode.val);
                 if (currentNode.left != null) {
