@@ -3,17 +3,14 @@ import java.io.*;
 import java.util.Scanner;
 
 public class fileHandling {
-    public static void main(String args[]) {
+    public static void main(String args[])  throws IOException{
+        Scanner sc = new Scanner(System.in);
         System.out.println("ENTER THE DATA ");
-        try (Scanner sc = new Scanner(System.in);
-             FileWriter fw = new FileWriter("abc.txt")) {
-
-            String data = sc.nextLine();
-            fw.write(data);
-            System.out.println("Saved data ");
-        } catch (IOException e) {
-            System.err.println("Failed to write to file: " + e.getMessage());
-            e.printStackTrace();
-        }
+        String data = sc.nextLine();
+        FileWriter fw = new FileWriter("abc.txt");
+        fw.write(data);
+        fw.close();
+        System.out.println("Saved data ");
     }
 }
+
