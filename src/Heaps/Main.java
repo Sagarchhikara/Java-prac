@@ -77,7 +77,36 @@ class Main {
 //
 //        // Calculate and print total value rounded to 2 decimal places
 //        System.out.printf("%.2f", product.calculateValue());
-//
+//Q6
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i <= n; i++) {
+            arr[i]=sc.nextInt();
+        }
+        int[] even=new int[n];
+        int[] odd=new int[n];
+        for (int i = 0; i <= n; i++) {
+            if(i%2==0){
+                even[i]=i;
+            }
+            if(i%2!=0){
+                odd[i]=i;
+            }
+        }
+        // merge even and odd
+        int[] ans=new int[n];
+        for (int i = 0; i <= even.length; i++) {
+            ans[i]=even[i];
+        }
+        for (int i = 0; i <= odd.length; i++) {
+            ans[i]=odd[i];
+        }
+        for (int i = 0; i <= n; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        for (int i = 0; i <= n; i++) {
+            System.out.print(ans[i]+" ");
+        }
 
 
 
