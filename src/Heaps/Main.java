@@ -78,35 +78,53 @@ class Main {
 //        // Calculate and print total value rounded to 2 decimal places
 //        System.out.printf("%.2f", product.calculateValue());
 //Q6
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i <= n; i++) {
-            arr[i]=sc.nextInt();
-        }
-        int[] even=new int[n];
-        int[] odd=new int[n];
-        for (int i = 0; i <= n; i++) {
-            if(i%2==0){
-                even[i]=i;
-            }
-            if(i%2!=0){
-                odd[i]=i;
-            }
-        }
-        // merge even and odd
-        int[] ans=new int[n];
-        for (int i = 0; i <= even.length; i++) {
-            ans[i]=even[i];
-        }
-        for (int i = 0; i <= odd.length; i++) {
-            ans[i]=odd[i];
-        }
-        for (int i = 0; i <= n; i++) {
-            System.out.print(arr[i]+" ");
-        }
-        for (int i = 0; i <= n; i++) {
-            System.out.print(ans[i]+" ");
-        }
+                int n = sc.nextInt();
+                int[] arr = new int[n];
+
+                // Input array
+                for (int i = 0; i < n; i++) {
+                    arr[i] = sc.nextInt();
+                }
+
+                // Separate even and odd
+                int[] even = new int[n];
+                int[] odd = new int[n];
+                int eCount = 0, oCount = 0;
+
+                for (int i = 0; i < n; i++) {
+                    if (arr[i] % 2 == 0) {
+                        even[eCount++] = arr[i];
+                    } else {
+                        odd[oCount++] = arr[i];
+                    }
+                }
+
+                // Merge even and odd into ans
+                int[] ans = new int[eCount + oCount];
+                int idx = 0;
+
+                for (int i = 0; i < eCount; i++) {
+                    ans[idx++] = even[i];
+                }
+                for (int i = 0; i < oCount; i++) {
+                    ans[idx++] = odd[i];
+                }
+
+                // Print original array
+                System.out.print("Original: ");
+                for (int i = 0; i < n; i++) {
+                    System.out.print(arr[i] + " ");
+                }
+                System.out.println();
+
+                // Print merged array
+                System.out.print("Merged (Even + Odd): ");
+                for (int i = 0; i < ans.length; i++) {
+                    System.out.print(ans[i] + " ");
+                }
+
+
+
 
 
 
