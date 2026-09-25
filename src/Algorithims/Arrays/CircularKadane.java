@@ -1,0 +1,27 @@
+package Algorithims.Arrays;
+
+public class CircularKadane {
+    public int maxSubarraySumCircular(int[] nums) {
+        int totalSum=0;
+        int currentMax=0;
+        int maxSum=Integer.MIN_VALUE;
+        int currentMin=0;
+        int minSum=Integer.MAX_VALUE;
+        for(int num:nums){
+            totalSum+=num;
+            currentMax=Math.max(num,currentMax+num);
+            maxSum=Math.max(maxSum,currentMax);
+            currentMin = Math.min(num, currentMin + num);
+            minSum = Math.min(minSum, currentMin);
+        }
+        if (maxSum<0) return maxSum;
+        int wrapSum=totalSum-minSum;
+        return Math.max(maxSum,wrapSum);
+
+    }
+    public static void main(String[] args) {
+        CircularKadane ck = new CircularKadane();
+        int[] nums = {1,-2,3,-2};
+        System.out.println(ck.maxSubarraySumCircular(nums)); // Output: 3
+    }
+}
